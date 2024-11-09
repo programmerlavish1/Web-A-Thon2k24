@@ -33,7 +33,7 @@ Clone this repository:
 
 bash
 Copy code
-git clone https://github.com/programmerlavish1/Web-A-Thon.git
+git clone https://github.com/programmerlavish1/Web-A-Thon2k24.git
 cd UIDAI-Bot-Detection
 Install dependencies:
 
