@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# Web-a-thon2k24
+ functional solution to refine captcha
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ UIDAI Portal Bot Detection System : 
 
-## Available Scripts
+*Project Overview*
 
-In the project directory, you can run:
+The UIDAI Portal Bot Detection System is designed to enhance security on the Aadhaar portal by distinguishing between human users and bots through passive detection techniques. By analyzing behavioral cues, such as mouse movement, click patterns, and session activity, this system helps prevent unauthorized bot access to Aadhaar resources without relying on intrusive CAPTCHA systems.
 
-### `npm start`
+*Table of Contents*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Features    
+Installation
+Usage
+Project Structure
+Demo
+Tech Stack
+Future Enhancements
+Contributing
+License
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+*Features*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Passive Bot Detection: Analyzes user behaviors, like mouse movement patterns, to distinguish bots from humans.
+Intuitive Login and Registration Pages: User-friendly interfaces for UIDAI portal login and registration.
+Data Persistence: Stores user data locally for session continuity.
+Security and Privacy: Protects user data and maintains session integrity.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*Installation*
+Clone this repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+bash
+Copy code
+git clone https://github.com/coderlavish/UIDAI-Bot-Detection.git
+cd UIDAI-Bot-Detection
+Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+react: => For building the user interface ("react": "^18.2.0")
+react Router DOM: => "react-router-dom" ("^6.4.0")
+Axios: => "axios" ("^1.3.0")
 
-### `npm run eject`
+*Styling Dependencies*
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Tailwind CSS => For utility-first styling ("tailwindcss": "^3.2.0)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Express: => for backend server ("express": "^4.18.2")
+Body-Parser : => For parsing incoming request bodiesF ("body-parser": "^1.20.1")
+Cors: => For handling Cross-Origin Resource Sharing (if frontend and backend are on different servers) ("cors": "^2.8.5")
+PostCSS and Autoprefixer: Used with Tailwind CSS.("postcss": "^8.4.6",
+"autoprefixer": "^10.4.1")
+package.json dependencies => "dependencies": {
+  "react": "^18.2.0",
+  "react-router-dom": "^6.4.0",
+  "axios": "^1.3.0",
+  "tailwindcss": "^3.2.0",
+  "express": "^4.18.2",
+  "body-parser": "^1.20.1",
+  "cors": "^2.8.5"
+},
+"devDependencies": {
+  "postcss": "^8.4.6",
+  "autoprefixer": "^10.4.1"
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+bash
+Copy code
+npm install
+Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+bash
+Copy code
+npm start
+Run the backend server (ensure backend API is accessible if necessary):
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+bash
+Copy code
+node server.js
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+*Usage*
 
-### Analyzing the Bundle Size
+Registration Page:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Users provide a username, password, and an Aadhaar photo URL to register.
+Login Page:
+Users must pass a passive CAPTCHA by random mouse movements to prove human behavior.
+After successful verification, users can access the portal.
 
-### Making a Progressive Web App
+Home Page:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Displays user information and Aadhaar photo if verification and login are successful.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+*Project Structure*
 
-### Deployment
+HomePage Component (HomePage.js): Displays user information and Aadhaar photo if available.
+LoginPage Component (LoginPage.js): Manages login form and passive CAPTCHA verification using mouse movement data.
+MouseTracking Component (MouseTracking.js): Captures and verifies mouse movement patterns.
+UserForm Component (UserForm.js): Handles user registration with username, password . 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+*Demo*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+Frontend: React, Tailwind CSS for UI design.
+Backend: Node.js with Express for handling API calls (assumed).
+Verification: Machine learning model for bot detection.
+Future Enhancements
+Integrate ML model with live data to improve bot detection accuracy.
+Add database storage for long-term user session tracking and behavior analysis.
+Implement advanced authentication mechanisms like OTP-based verification.
+Contributing
+Contributions are welcome! To contribute:
+
+*Fork the repository*
+
+Create a new branch for your feature.
+Submit a pull request describing the enhancements.
+
+*License*
+Distributed under the MIT License. See LICENSE for more information.
